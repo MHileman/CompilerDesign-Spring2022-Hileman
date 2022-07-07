@@ -1,0 +1,27 @@
+Symbol Table (created by Matthew Hileman - UCCS CS4100, SP2022)
+----------------------------------------------------------------
+I  | Symbol                        | K  | DT | Val
+----------------------------------------------------------------
+0  | -1                            | C  | I  | -1
+1  | 1                             | C  | I  | 1
+2  | Codegen                       | P  | I  | 0
+3  | FULL SP22 TEST File for MATTHEW HILEMAN| C  | S  | FULL SP22 TEST File for MATTHEW HILEMAN
+4  | factorial                     | V  | I  | 0
+5  | Enter the value 5 for n:      | C  | S  | Enter the value 5 for n:
+6  | n                             | V  | I  | 0
+7  | count                         | V  | I  | 0
+8  | @0                            | V  | I  | 0
+9  | @1                            | V  | I  | 0
+10 | @2                            | V  | I  | 0
+11 | The calculation of 5! is:     | C  | S  | The calculation of 5! is:
+12 |                               | C  | S  |  
+13 | @3                            | V  | I  | 0
+14 | 2                             | C  | I  | 2
+15 | @4                            | V  | I  | 0
+16 | @5                            | V  | I  | 0
+17 | Count - 2 is greater than 2   | C  | S  | Count - 2 is greater than 2
+18 | Count - 2 is less than or equal to 2| C  | S  | Count - 2 is less than or equal to 2
+19 | @6                            | V  | I  | 0
+20 | Count is:                     | C  | S  | Count is: 
+21 | All done.                     | C  | S  | All done.
+----------------------------------------------------------------

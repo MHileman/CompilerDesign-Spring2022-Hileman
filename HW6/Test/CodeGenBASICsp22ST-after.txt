@@ -1,0 +1,25 @@
+Symbol Table (created by Matthew Hileman - UCCS CS4100, SP2022)
+----------------------------------------------------------------
+I  | Symbol                        | K  | DT | Val
+----------------------------------------------------------------
+0  | -1                            | C  | I  | -1
+1  | 1                             | C  | I  | 1
+2  | CodegenBASIC                  | P  | I  | 0
+3  | BASIC TEST File SP22          | C  | S  | BASIC TEST File SP22
+4  | String printout:  Hello World | C  | S  | String printout:  Hello World
+5  | a                             | V  | I  | 25
+6  | 2                             | C  | I  | 2
+7  | b                             | V  | I  | 3
+8  | 3                             | C  | I  | 3
+9  | @0                            | V  | I  | 6
+10 | @1                            | V  | I  | 12
+11 | @2                            | V  | I  | 14
+12 | @3                            | V  | I  | 6
+13 | @4                            | V  | I  | 3
+14 | @5                            | V  | I  | 17
+15 | @6                            | V  | I  | 16
+16 | a is now                      | C  | S  | a is now 
+17 | Input a value of 25 for a:    | C  | S  | Input a value of 25 for a: 
+18 | After READLN, a is now        | C  | S  | After READLN, a is now 
+19 | All done.                     | C  | S  | All done.
+----------------------------------------------------------------
