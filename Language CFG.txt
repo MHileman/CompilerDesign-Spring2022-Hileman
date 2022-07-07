@@ -1,0 +1,41 @@
+--------------------------
+***** LANGUAGE CFG *****
+--------------------------
+Notation: In the CFG below, the following conventions are used:
+1) Anything prefaced by a $ is a terminal token (symbol or reserved word). anything inside of <> pointy brackets is a non-terminal.
+2) An item enclosed in ‘[‘,’]’ square braces is optional
+3) An item enclosed in ‘{‘,’}’ curly braces is repeatable; ‘*’ is ‘0 or more times’, while ‘+’ is ‘1 or more times’.
+4) Vertical bars, ‘|’, are OR connectors; any one of the items they separate may be selected.
+5) Note that all named elements of the form $SOMETHING are token codes for terminals which are defined for this language and returned by the lexical analyzer.
+----------------------------------------------------------------
+ * <program> -> $PROGRAM <prog-identifier> $SEMICOLON <block> $PERIOD
+ * <block> -> $BEGIN <statement> {$SEMICOLON <statement>}* $END
+ * <prog-identifier> -> <identifier>
+ * <statement> -> <variable> $COLON-EQUALS <simple expression>
+ * <variable> -> <identifier>
+ * <simple expression> -> [<sign>]  <term>  {<addop>  <term>}*
+ * <addop> -> $PLUS | $MINUS
+ * <sign> -> $PLUS | $MINUS
+ * <term> -> <factor> {<mulop> <factor> }*
+ * <mulop> -> $MULTIPLY | $DIVIDE
+ * <factor> -> <unsigned constant> | <variable> | $LPAR <simple expression> $RPAR
+ * <unsigned constant> -> <unsigned number>
+ * <unsigned number> -> $FLOAT | $INTEGER (Token codes 51 only - int)
+ * <identifier> -> $IDENTIFIER (Token code 50)
+
+-------------------------------
+ NEW ADDITIONS (FINAL PROJECT)
+-------------------------------
+ * <block> -> <block-body>
+ * <block-body> -> $BEGIN <statement> {$SCOLN <statement>} $END
+ * <statement>-> [
+   <block-body> |
+   <variable> $ASSIGN <simple expression> |
+   $IF <relexpression> $THEN <statement> [$ELSE <statement>] |
+   $WHILE <relexpression> $DO <statement> |
+   $PRINTLN $LPAR (<simple expression> |
+   <stringconst>) $RPAR $READN  $LPAR <variable>  $RPAR
+   ]+
+ * <relexpression> -> <simple expression> <relop> <simple expression>
+ * <relop> -> $EQ | $LSS | $GTR | $NEQ | $LEQ | $GEQ
+ * <stringconst> -> $STRINGTYPE (Token code 53)
